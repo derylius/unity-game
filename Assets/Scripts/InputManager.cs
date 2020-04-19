@@ -5,7 +5,7 @@ using UnityEngine;
 public class InputManager : MonoBehaviour
 {
     public float panSpeed;
-    private float panDetect = 15;
+    private float panDetect = 15f;
 
     // Start is called before the first frame update
     void Start()
@@ -47,7 +47,7 @@ public class InputManager : MonoBehaviour
             moveY -= panSpeed;
         }
 
-        Vector3 newPos = new Vector3(moveX, moveY, 0);
+        Vector3 newPos = new Vector3(moveX, moveY, -1);
 
         Camera.main.transform.position = newPos;
     }
